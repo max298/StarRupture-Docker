@@ -5,8 +5,9 @@ Docker Linux container image for running a StarRupture dedicated server.
 ## ⚠️ Disclaimer
 
 This Docker container was created during the playtest phase of the game. Unfortunately the playtest ended before I could test everything.
-Since the full game has not been released yet, the container is currently **not functional** and **cannot run** as intended.
-When the full game releases, I hope to get this running asap.
+Since the game is not released at all, the container is currently **not functional** and **cannot run** at all.
+When the full game releases I hope to get this running asap, however I did notice quite a lot of error-logs from wine and I'm not that
+familiar with running windows programs in linux.
 
 ## Usage
 
@@ -27,6 +28,6 @@ sudo docker compose build
 mkdir ./data/Steam
 sudo docker run -it -v ./data:/server/Steam <the-image-from-above>
 
-# once you're logged in, you can CTRL+C und start the server using compose
+# once you're logged in, you can CTRL+C and start the server using compose
 sudo docker compose up -d
 ```

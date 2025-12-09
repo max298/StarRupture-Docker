@@ -5,7 +5,7 @@ Very minimal Docker Linux container image for running a StarRupture dedicated se
 ## ⚠️ Disclaimer
 
 This Docker container was created during the playtest phase of the game. Unfortunately the playtest ended before I could test everything.
-Since the game is not released at all, the container is currently **not functional** and **cannot run** at all.
+Since the game is not released and the playtest ended, the container is currently **not functional** and **cannot run** at all.
 When the full game releases I hope to get this running asap, however I did notice quite a lot of error-logs from wine and I'm not that
 familiar with running windows programs in linux.
 

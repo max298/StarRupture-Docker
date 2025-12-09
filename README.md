@@ -1,6 +1,6 @@
 # StarRupture Dedicated Server - Docker Container
 
-Docker Linux container image for running a StarRupture dedicated server.
+Very minimal Docker Linux container image for running a StarRupture dedicated server.
 
 ## ⚠️ Disclaimer
 
@@ -31,3 +31,9 @@ sudo docker run -it -v ./data:/server/Steam <the-image-from-above>
 # once you're logged in, you can CTRL+C and start the server using compose
 sudo docker compose up -d
 ```
+
+### Environment
+
+I couldn't find any parameters to configure the server itself, so there are only two environment variables:
+- `STEAMAPPID` (default 4225260) - the app-id of the server from steam. Will be used to download the game data
+- `username` - a valid steam user which has a valid license to download the server from steam

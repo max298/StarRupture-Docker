@@ -9,5 +9,5 @@ services:
       - "7777:7777"
       - "30020:30020/tcp"
     env:
-      - "user": "some-steam-user"
+      - "username": "some-steam-user"
 ...

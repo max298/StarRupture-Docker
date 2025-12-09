@@ -1,0 +1,13 @@
+---
+services:
+  server:
+    build:
+      context: "."
+    volumes:
+      - "./data:/server/Steam"
+    ports:
+      - "7777:7777"
+      - "30020:30020/tcp"
+    env:
+      - "user": "some-steam-user"
+...

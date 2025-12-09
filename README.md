@@ -4,13 +4,14 @@ Docker Linux container image for running a StarRupture dedicated server.
 
 ## ⚠️ Disclaimer
 
-This Docker container was created during the playtest phase of the game.  
+This Docker container was created during the playtest phase of the game. Unfortunately the playtest ended before I could test everything.
 Since the full game has not been released yet, the container is currently **not functional** and **cannot run** as intended.
-Functionality will be updated once the final game becomes available.
+When the full game releases, I hope to get this running asap.
 
 ## Usage
 
 **Note**: These steps only apply if you want to experiment with the current non-functional pre-release container.
+Since the playtest finished you'll be unable to download the server from steam.
 
 At the moment the image needs to be build by yourself.
 

@@ -2,17 +2,30 @@
 
 Docker Linux container image for running a StarRupture dedicated server.
 
-**NOTE The game is _not released_. I've created this container during the playtest from 12-04 - 12-08. I assume when the game releases this container should work with some slight modifications, so it should be a good starting point.**
+## ⚠️ Disclaimer
+
+This Docker container was created during the playtest phase of the game.  
+Since the full game has not been released yet, the container is currently **not functional** and **cannot run** as intended.
+Functionality will be updated once the final game becomes available.
 
 ## Usage
+
+**Note**: These steps only apply if you want to experiment with the current non-functional pre-release container.
 
 At the moment the image needs to be build by yourself.
 
 ```bash
-sudo docker build . -t max/SR-server
-# you must run the container using -it, beacuse you have to login using tty when you first launch the server
-# for now, I've decided to mount the entire Steam direcotry, because we need to cache not only the game
-# but also the credentials.
-# in the future, I'll add a compose.yml and some instructions on the actual directories that we need as volumes
-sudo docker run -it -v ./data:/server/Steam -e username="<your-steam-user>" --net=host max/SR-server
+git clone git@github.com:max298/StarRupture-Docker.git
+cd StarRupture-Docker
+
+sudo docker compose build
+
+# because you need to login using steam, an interactive shell is required for the first run
+# for now I cache the entire Steam directory, because we want to cache saved credentials
+# and also game-data
+mkdir ./data/Steam
+sudo docker run -it -v ./data:/server/Steam <the-image-from-above>
+
+# once you're logged in, you can CTRL+C und start the server using compose
+sudo docker compose up -d
 ```

@@ -24,4 +24,4 @@ You should now load into a new game running your very own dedicated server.
 
 ## Resuming the game
 
-In case the server was stopped and should resume, you'll have to open the `Manage Server` screen again, then press the `Load Game` button and load your savegame.
+In case the server was stopped and you want to resume, you'll have to open the `Manage Server` screen again, then press the `Load Game` button and load your savegame.

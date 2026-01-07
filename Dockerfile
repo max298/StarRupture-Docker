@@ -6,7 +6,7 @@ RUN groupadd --gid 1000 user
 RUN useradd --uid 1000 --gid 1000 --home-dir /server --shell /bin/false user
 RUN chown -R user: /server
 
-# app-id of playtest server
+# app-id of server
 ENV STEAMAPPID="3809400"
 ENV HOME=/server
 
@@ -44,7 +44,7 @@ RUN bash -c ' \
 COPY --chown=user:user entrypoint.sh /server/entrypoint.sh
 RUN chmod +x /server/entrypoint.sh
 
-# 7777 + 30010 are required, 30020 appears to be some kind of 'api'
+# 7777/tcp+udp is required, 30020 appears to be some kind of 'api'
 EXPOSE 7777/udp
 EXPOSE 30010/tcp
 EXPOSE 30020/tcp

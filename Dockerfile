@@ -7,7 +7,7 @@ RUN useradd --uid 1000 --gid 1000 --home-dir /server --shell /bin/false user
 RUN chown -R user: /server
 
 # app-id of playtest server
-ENV STEAMAPPID="4225260"
+ENV STEAMAPPID="3809400"
 ENV HOME=/server
 
 # requirements for running the server under linux

@@ -4,7 +4,7 @@ services:
     build:
       context: "."
     volumes:
-      - "./data:/server/steamdata"
+      - "./data:/server/gamedata"
     ports:
       - "7777:7777"
       - "30010:30010"

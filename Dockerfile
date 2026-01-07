@@ -44,7 +44,7 @@ RUN bash -c ' \
 COPY --chown=user:user entrypoint.sh /server/entrypoint.sh
 RUN chmod +x /server/entrypoint.sh
 
-# fixme: check which ports are required for the game to run
+# 7777 + 30010 are required, 30020 appears to be some kind of 'api'
 EXPOSE 7777/udp
 EXPOSE 30010/tcp
 EXPOSE 30020/tcp

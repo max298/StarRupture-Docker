@@ -4,12 +4,11 @@ services:
     build:
       context: "."
     volumes:
-      - "./data:/server/Steam"
+      - "./data:/server/steamdata"
     ports:
       - "7777:7777"
+      - "30010:30010"
       # port 30020 holds a websocket by unreal engine, which allows to control the server (?)
       # https://dev.epicgames.com/documentation/en-us/unreal-engine/remote-control-api-websocket-reference-for-unreal-engine
       #- "30020:30020/tcp"
-    env:
-      - "username": "some-steam-user"
 ...

@@ -1,8 +1,7 @@
 ---
 services:
   server:
-    build:
-      context: "."
+    image: "ghcr.io/max298/starrupture-docker:main"
     volumes:
       - "./data:/server/gamedata"
     ports:

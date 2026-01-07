@@ -1,19 +1,7 @@
 #!/usr/bin/env bash
 
-# check existance of steamcmd.exe
-if [ ! -e "./steamdata/steamcmd.exe" ]; then
-  # get steamcmd.exe (because linux-steamcmd won't download windows-app)
-  printf "Downloading steamcmd...\n"
-  curl --output "steamcmd.zip" https://steamcdn-a.akamaihd.net/client/installer/steamcmd.zip
-  unzip steamcmd.zip
-  # cleanup
-  rm steamcmd.zip
-  # move to persistant storage
-  mv steamcmd.exe /server/steamdata
-fi
-
 printf "Updating game %s...\n" "$STEAMAPPID"
-wine /server/steamdata/steamcmd.exe +force_install_dir /server +login anonymous +app_update "$STEAMAPPID" validate +quit
+steamcmd +@sSteamCmdForcePlatformType windows +force_install_dir /server/gamedata +login anonymous +app_update "$STEAMAPPID" validate +quit
 
 printf "Starting server...\n"
-xvfb-run wine "/server/steamdata/steamapps/common/StarRupture Dedicated Server/StarRuptureServerEOS.exe" -Log -port=7777
+xvfb-run wine /server/gamedata/StarRupture/Binaries/Win64/StarRuptureServerEOS-Win64-Shipping.exe -Log -port=7777 2>&1
